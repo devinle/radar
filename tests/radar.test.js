@@ -70,6 +70,7 @@ test('Test link using ignore class is ignored', () => {
   document.body.innerHTML = `
     <a href="/test" id="testLink" class="radar-ignore">Click me</a>
   `;
+
   simulateClick(document.getElementById('testLink'));
   expect(window.history.pushState.mock.calls.length).toBe(0);
 });

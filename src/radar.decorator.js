@@ -8,7 +8,7 @@
  * @param {String} title - Optional title (not used in FF)
  */
 export const routeRequest = ({ from = '', to = '' }, title = '') => {
-  if(to === '') return;
+  if (to === '') return;
   window.history.pushState(
     { from, to },
     title,

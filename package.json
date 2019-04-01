@@ -23,6 +23,7 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "@devinle/sonar": "^1.0.23",
     "babel-jest": "^24.3.1",
     "path": "^0.12.7"
   }

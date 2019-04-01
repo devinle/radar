@@ -3,11 +3,11 @@
  *
  * Router
  */
-
+import { sonar } from '@devinle/sonar';
 import { routeRequest } from './radar.decorator';
 
 // Main export
-export const radar = (function radar() {
+export const radar = Object.assign((function radar() {
   /**
    * @function go
    * Main handler to parse the event and route
@@ -54,6 +54,6 @@ export const radar = (function radar() {
   return {
     go,
   };
-}());
+}()), sonar);
 
 export default radar;
