@@ -1,6 +1,6 @@
 {
   "name": "@devinle/radar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A router.",
   "main": "dist/radar.js",
   "repository": "https://github.com/devinle/radar.git",

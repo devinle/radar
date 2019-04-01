@@ -46,13 +46,12 @@ radar.init = function init() {
   );
   // Initialize delegation for router handling
   document.body.addEventListener('click', radar.go);
-};
 
-// Initialize radar
-radar.init();
+  return this;
+};
 
 // Freeze radar
 Object.freeze(radar);
 
 // Export
-export default radar;
+export default radar.init();
