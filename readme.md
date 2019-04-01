@@ -1,6 +1,6 @@
 # Radar
 
-> A router.
+> A window history no config router.
 
 ![npm](https://img.shields.io/npm/v/@devinle/radar.svg)
 ![NPM](https://img.shields.io/npm/l/@devinle/radar.svg)
