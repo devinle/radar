@@ -8,8 +8,8 @@
  * @param {String} title - Optional title (not used in FF)
  */
 export const routeRequest = (payload, title = '') => {
-  console.log('test');
   const { from, to } = payload;
+  console.log(from, to);
   if (to === '') return;
   window.history.pushState(
     { from, to },
