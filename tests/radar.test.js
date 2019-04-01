@@ -1,8 +1,4 @@
-//jest.mock('../src/radar.decorator');
-
 import radar from '../src/radar';
-
-import radarRequest from '../src/radar.decorator';
 
 /**
  * Simulate a click event.
@@ -26,18 +22,18 @@ beforeEach(() => {
 });
 
 test('calls window history once', () => {
-  radarRequest({ from: 'a', to: 'b' }, 'This is a title');
+  radar.routeRequest({ from: 'a', to: 'b' }, 'This is a title');
   expect(window.history.pushState.mock.calls.length).toBe(1);
 });
 
 test('calls window history with proper payload', () => {
-  radarRequest({ from: 'a', to: 'b' }, 'This is a title');
+  radar.routeRequest({ from: 'a', to: 'b' }, 'This is a title');
   expect(window.history.pushState.mock.calls[0][0]).toEqual({ from: 'a', to: 'b' });
   expect(window.history.pushState.mock.calls[0][1]).toBe('This is a title');
 });
 
 test('does not call window history with missing to parameter', () => {
-  radarRequest({ from: 'a', to: '' }, 'This is a title');
+  radar.routeRequest({ from: 'a', to: '' }, 'This is a title');
   expect(window.history.pushState.mock.calls.length).toBe(0);
 });
 
