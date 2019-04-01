@@ -1,6 +1,6 @@
 //jest.mock('../src/radar.decorator');
 
-import { radar } from '../src/radar';
+import radar from '../src/radar';
 
 import radarRequest from '../src/radar.decorator';
 
@@ -73,4 +73,31 @@ test('Test link using ignore class is ignored', () => {
 
   simulateClick(document.getElementById('testLink'));
   expect(window.history.pushState.mock.calls.length).toBe(0);
+});
+
+test('Test on event callback fired once', () => {
+  const callback = jest.fn();
+  radar.on('radar-change', callback);
+  // Initialize delegation for router handling
+  document.body.addEventListener('click', radar.go);
+  // Add a link
+  document.body.innerHTML = `
+    <a href="/test" id="testLink">Click me</a>
+  `;
+  simulateClick(document.getElementById('testLink'));
+  expect(callback.mock.calls.length).toBe(1);
+});
+
+test('Expect callback data to be accurate', () => {
+  let test = {};
+  const callback = function callback(data) { test = data; };
+  radar.on('radar-change', callback);
+  // Initialize delegation for router handling
+  document.body.addEventListener('click', radar.go);
+  // Add a link
+  document.body.innerHTML = `
+    <a href="/test" id="testLink">Click me</a>
+  `;
+  simulateClick(document.getElementById('testLink'));
+  expect(test).toEqual({ from: 'http://localhost/', to: 'http://localhost/test' });
 });

@@ -13,6 +13,17 @@ npm install @devinle/radar
 
 // In your script
 import { radar } from '@devinle/radar';
+
+// Make a callback function
+const callback = (data) => { console.log(data); };
+
+// Register a callback with an event
+// This event can receive data
+radar.on('radar:change', callback);
+
+// Remove a specific callback from an event
+radar.off('radar:change', callback);
+
 ```
 
 ## Usage
