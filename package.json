@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A router.",
   "main": "dist/radar.js",
-  "repository": "https://github.com/devinle/radar.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devinle/radar.git"
+  },
   "author": "Devin Leggett",
   "license": "MIT",
   "scripts": {
@@ -26,5 +29,12 @@
     "@devinle/sonar": "^1.0.23",
     "babel-jest": "^24.3.1",
     "path": "^0.12.7"
+  },
+  "bugs": {
+    "url": "https://github.com/devinle/radar/issues"
+  },
+  "homepage": "https://github.com/devinle/radar#readme",
+  "directories": {
+    "test": "tests"
   }
 }
