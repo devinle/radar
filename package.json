@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "A router.",
   "main": "dist/radar.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/devinle/radar.git"
-  },
+  "repository": "https://github.com/devinle/radar.git",
   "author": "Devin Leggett",
   "license": "MIT",
   "scripts": {
