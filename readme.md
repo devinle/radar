@@ -13,8 +13,17 @@ npm install @devinle/radar
 ```
 
 ## Usage
+All links delegate to the body and will make a request to the window pushState.
 
 ```
+<a href="/url/here">A Link</a>
+```
+
+## Prevent History Request
+To avoid calling the window pushState function, apply the radar-ignore class to a link.
+
+```
+<a href="/url/here" class="radar-ignore">A Link</a>
 ```
 
 ## Tests
