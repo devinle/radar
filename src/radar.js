@@ -17,8 +17,8 @@ const radar = Object.assign({}, sonar);
  * @param {String} payload.to - To URL
  * @param {String} title - Optional title (not used in FF)
  */
-radar.routeRequest = (payload, title = '') => {
-  const { from, to } = payload;
+radar.routeRequest = (payload = {}, title = '') => {
+  const { from = '', to = '' } = payload;
   if (to === '') return;
   window.history.pushState(
     { from, to },
