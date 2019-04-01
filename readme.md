@@ -10,6 +10,9 @@
 
 ```bash
 npm install @devinle/radar
+
+// In your script
+import radar from '@devinle/radar;
 ```
 
 ## Usage
@@ -27,7 +30,7 @@ To avoid calling the window pushState function, apply the radar-ignore class to 
 ```
 
 ## Method radar.go(evt)
-The body is bound to the radar.go method and all <a> links clicked within the body will call this API method.
+The body is bound to the radar.go method and all <a> links clicked within the body will call this API method unless it contains the ignore class.
 
 ## Tests
 
