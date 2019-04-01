@@ -1,6 +1,6 @@
 //jest.mock('../src/radar.decorator');
 
-import radar from '../src/radar';
+import { radar } from '../src/radar';
 
 import radarRequest from '../src/radar.decorator';
 

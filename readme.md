@@ -12,7 +12,7 @@
 npm install @devinle/radar
 
 // In your script
-import radar from '@devinle/radar;
+import { radar } from '../src/radar';
 ```
 
 ## Usage
