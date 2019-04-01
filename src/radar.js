@@ -34,24 +34,17 @@ radar.go = function go(e) {
   return payload;
 };
 
-/**
- * @function init
- * Bind window listeners for popstate
- * and setup initial history state
- */
-radar.init = function init() {
-  window.addEventListener(
-    'popstate',
-    e => routeRequest(e.state),
-  );
-  // Initialize delegation for router handling
-  document.body.addEventListener('click', radar.go);
+// Initialize popstate event callback on window
+window.addEventListener(
+  'popstate',
+  e => routeRequest(e.state),
+);
 
-  return this;
-};
+// Initialize delegation for router handling
+document.body.addEventListener('click', radar.go);
 
 // Freeze radar
 Object.freeze(radar);
 
 // Export
-export default radar.init();
+export default radar;
