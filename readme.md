@@ -26,6 +26,9 @@ To avoid calling the window pushState function, apply the radar-ignore class to 
 <a href="/url/here" class="radar-ignore">A Link</a>
 ```
 
+## Method radar.go(evt)
+The body is bound to the radar.go method and all <a> links clicked within the body will call this API method.
+
 ## Tests
 
 ```
