@@ -44,11 +44,15 @@ radar.init = function init() {
     'popstate',
     e => routeRequest(e.state),
   );
+  // Initialize delegation for router handling
+  document.body.addEventListener('click', radar.go);
 };
 
+// Initialize radar
 radar.init();
 
-// Initialize delegation for router handling
-document.body.addEventListener('click', radar.go);
+// Freeze radar
+Object.freeze(radar);
 
+// Export
 export default radar;
