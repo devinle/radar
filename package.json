@@ -1,0 +1,29 @@
+{
+  "name": "@devinle/radar",
+  "version": "1.0.0",
+  "description": "A router.",
+  "main": "dist/radar.js",
+  "repository": "https://github.com/devinle/radar.git",
+  "author": "Devin Leggett",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src --fix",
+    "build": "webpack",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.3.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "babel-jest": "^24.3.1",
+    "path": "^0.12.7"
+  }
+}
